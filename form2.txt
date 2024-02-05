@@ -1,0 +1,49 @@
+Patient = Patientname
+DOB = PatientDOB
+Physician = Physician
+Desired Date of Procedure = Procedure-Date
+PROCEDURE = PROCEDURE
+INDICATION = INDICATION
+History of Present Illness = HistoryofPresentIllness
+Past Medical/Surgical History = PastMedical/SurgicalHistory
+Previous Peripheral Vascular Intervention = PreviousPeripheralVascularIntervention
+Previous Angiogram = Previous-Angiogram
+Risk Factors = RiskFactors
+Medications  = Medications
+Labs 
+	Labs K+ (potassium)
+	BUN
+	Glucose
+	Creatnine
+	(if greater than 1.2, was Mucomyst given?)
+	Impression
+	Plan
+Physical Exam and Review of Systems:
+	BP (Right)
+	BP (Left)
+	P
+	RB
+	HFENT
+	Lungs
+	Abd
+	Skin
+	Heart
+	Ext
+	JVD(YES OR NO)
+	Carotid Bruit(yes or no)
+	Renal Brui(yes or no)
+Pulses: 
+	Radial/Brachial(Right & Left)(Radial/Brachial-Right & Radial/Brachial-Left)
+	Femoral(Right & Left)Femoral-Right & Femoral-Left)
+	Popliteal(Right & Left)Popliteal-Right & Popliteal-Left)
+	Pedal(Right DP & Left DP)(Pedal-Right-DP & Pedal-Left-DP) 
+	Pedal(Right PT & Left PT)(Pedal-Right-PT & Pedal-Left-PT)
+ABI:	ABI-RIGHT & ABI-LEFT
+Rutherford Class = Rutherford-Class
+VENDOR REQUEST = VendorRequest
+SPECIAL INSTRUCTIONS = Special-Instruction
+PHYSICIAN’S SIGNATURE = PhysicianSignature
+DATE = form-2-submited-date
+TIME = form-2-submited-time
+	
+	
