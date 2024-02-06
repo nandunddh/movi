@@ -29,20 +29,27 @@ if (form1 !== null) {
 
     const data = new FormData(e.target);
     const entries = Object.fromEntries(data.entries());
-    console.log("data", entries);
 
-    fetch("form1_insert.php", {
-      method: "POST",
-      body: data,
-    })
-      .then((response) => response.text())
-      .then((result) => {
-        alert(result);
+    if (validateForm(entries)) {
+      fetch("form1_insert.php", {
+        method: "POST",
+        body: data,
       })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-    console.log(data);
+        .then((response) => response.text())
+        .then((result) => {
+          alert(result);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+
+      // window.location.reload();
+
+      console.log(entries);
+      // window.location.href = "form3.html";
+    } else {
+      // alert("Form validation failed. Please check your inputs.");
+    }
   });
 
   function validateForm(data) {

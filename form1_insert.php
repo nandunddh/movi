@@ -4,10 +4,10 @@ include "DB.php";
 // Check if form data is received
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Escape and sanitize form data
-    $patient_name = mysqli_real_escape_string($conn, $_POST['Patient Name']);
+    $patient_name = mysqli_real_escape_string($conn, $_POST['Patient_Name']);
     $dob = mysqli_real_escape_string($conn, $_POST['DOB']);
     $physician = mysqli_real_escape_string($conn, $_POST['Physician']);
-    $procedure_date = mysqli_real_escape_string($conn, $_POST['Procedure Date']);
+    $procedure_date = mysqli_real_escape_string($conn, date('Y-m-d', strtotime($_POST['Procedure Date'])));
     $procedure = mysqli_real_escape_string($conn, $_POST['Procedure']);
     $allergies = mysqli_real_escape_string($conn, $_POST['Allergies']);
     $labs_names = mysqli_real_escape_string($conn, $_POST['labs_names']);
