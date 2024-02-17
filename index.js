@@ -38,6 +38,7 @@ if (form1 !== null) {
         .then((response) => response.text())
         .then((result) => {
           alert(result);
+          // window.location.href = "form2.php";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -46,7 +47,6 @@ if (form1 !== null) {
       // window.location.reload();
 
       console.log(entries);
-      // window.location.href = "form3.html";
     } else {
       // alert("Form validation failed. Please check your inputs.");
     }
@@ -88,7 +88,7 @@ if (form2 !== null) {
         .then((response) => response.text())
         .then((result) => {
           alert(result);
-          alert("Form submitted successfully!");
+          // window.location.href = "form3.php";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -97,7 +97,6 @@ if (form2 !== null) {
       // window.location.reload();
 
       console.log(entries);
-      // window.location.href = "form3.html";
     } else {
       // alert("Form validation failed. Please check your inputs.");
     }
@@ -105,6 +104,21 @@ if (form2 !== null) {
 
   function validateForm(data) {
     for (const key in data) {
+
+      // Skip validation for the "Procedure Others" field
+      if (key === "Procedure Others") {
+        continue;
+      }
+      if (key === "Indication Others") {
+        continue;
+      }
+      if (key === "Medications Others") {
+        continue;
+      }
+      if (key === "Risk Factors Others") {
+        continue;
+      }
+
       if (!data[key]) {
         alert(`Please enter a value for ${key}.`);
 
@@ -138,7 +152,7 @@ if (form3 !== null) {
         .then((response) => response.text())
         .then((result) => {
           alert(result);
-          alert("Form submitted successfully!");
+          // window.location.href = "form5.php";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -184,7 +198,7 @@ if (form5 !== null) {
         .then((response) => response.text())
         .then((result) => {
           alert(result);
-          alert("Form submitted successfully!");
+          // window.location.href = "form6.php";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -228,8 +242,7 @@ if (form6 !== null) {
       })
         .then((response) => response.text())
         .then((result) => {
-          alert(result);
-          alert("Form submitted successfully!");
+          window.location.href = "form7.php";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -258,3 +271,59 @@ if (form6 !== null) {
     return true;
   }
 }
+
+function showInputField(select) {
+  var inputDiv = document.getElementById("othersInput");
+  var PROCEDURE_others = document.getElementById("PROCEDURE_others");
+
+  if (select.value === "others") {
+    inputDiv.style.display = "block";
+  } else {
+    inputDiv.style.display = "none";
+  }
+}
+
+function showPROCEDURE_others(select) {
+  var PROCEDURE_others = document.getElementById("PROCEDURE_others");
+
+  if (select.value === "others") {
+    PROCEDURE_others.style.display = "block";
+  } else {
+    PROCEDURE_others.style.display = "none";
+  }
+}
+
+function Past_Medical(select) {
+  var Past_Medical = document.getElementById("Past_Medical");
+
+  if (select.value === "others") {
+    Past_Medical.style.display = "block";
+  } else {
+    Past_Medical.style.display = "none";
+  }
+}
+
+function Risk_Factors(select) {
+  var Risk_Factors = document.getElementById("Risk_Factors");
+
+  if (select.value === "others") {
+    Risk_Factors.style.display = "block";
+  } else {
+    Risk_Factors.style.display = "none";
+  }
+}
+
+function show_Medications(select) {
+  var Medications = document.getElementById("Medications");
+
+  if (select.value === "others") {
+    Medications.style.display = "block";
+  } else {
+    Medications.style.display = "none";
+  }
+}
+
+flatpickr("input[type=date]", {
+  enableTime: false,
+  dateFormat: "m-d-Y",
+});

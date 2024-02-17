@@ -5,37 +5,37 @@ include "DB.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Sanitize and escape POST data
-    $patient_name = mysqli_real_escape_string($conn, $_POST['Patientname']);
-    $patient_dob = mysqli_real_escape_string($conn, $_POST['PatientDOB']);
-    $subjective_pain = mysqli_real_escape_string($conn, $_POST['SubjectivePain']);
-    $subjective_distance = mysqli_real_escape_string($conn, $_POST['SubjectiveDistance']);
-    $objective_pedal = mysqli_real_escape_string($conn, $_POST['ObjectivePedal']);
-    $objective_pedal_left = mysqli_real_escape_string($conn, $_POST['ObjectivePedalLeft']);
-    $objective_pedal_right = mysqli_real_escape_string($conn, $_POST['ObjectivePedalRight']);
-    $object_amputation = mysqli_real_escape_string($conn, $_POST['ObjectAmputation']);
-    $object_amputation_left_level = mysqli_real_escape_string($conn, $_POST['ObjectAmputationLeftLevel']);
-    $object_amputation_right_levels = mysqli_real_escape_string($conn, $_POST['ObjectAmputationRightLevels']);
-    $object_dependent_rubor = mysqli_real_escape_string($conn, $_POST['ObjectDependentrubor']);
-    $object_chronic_sores = mysqli_real_escape_string($conn, $_POST['ObjectChronicsores']);
-    $object_walking_impairment_questionnaire_completed = mysqli_real_escape_string($conn, $_POST['ObjectWalkingImpairmentQuestionnairecompleted']);
-    $object_rutherford_score = mysqli_real_escape_string($conn, $_POST['ObjectRutherfordScore']);
-    $object_ambulatory_status = mysqli_real_escape_string($conn, $_POST['ObjectAmbulatorystatus']);
-    $object_failed_conservative = mysqli_real_escape_string($conn, $_POST['ObjectFailedconservative']);
-    $object_dual_anti_platelet_statin = mysqli_real_escape_string($conn, $_POST['Objectdualanti-plateletstatin']);
-    $object_dual_wks_mos = mysqli_real_escape_string($conn, $_POST['Objectdualwksmos']);
-    $object_pletal = mysqli_real_escape_string($conn, $_POST['Objectpletal']);
-    $object_pletal_wks_mos = mysqli_real_escape_string($conn, $_POST['Objectpletalwksmos']);
-    $object_structured_non_structured_exercise_walking_program = mysqli_real_escape_string($conn, $_POST['ObjectStructurednon-structuredexercisewalkingprogram']);
-    $object_structured_non_structured_exercise_walking_program_wks_mos = mysqli_real_escape_string($conn, $_POST['ObjectStructurednon-structuredexercisewalkingprogramwksmos']);
-    $object_smoking_cessation_program = mysqli_real_escape_string($conn, $_POST['ObjectSmokingcessationprogram']);
-    $object_smoking_cessation_program_wks_mos = mysqli_real_escape_string($conn, $_POST['ObjectSmokingcessationprogramwksmos']);
-    $rutherford_score = mysqli_real_escape_string($conn, $_POST['RUTHERFORDSCORE']);
-    $testing_abi_tbi = mysqli_real_escape_string($conn, $_POST['TestingABI_TBI']);
-    $testing_lower_extremity = mysqli_real_escape_string($conn, $_POST['TestingLowerextremity']);
-    $testing_cta = mysqli_real_escape_string($conn, $_POST['TestingCTA']);
+    $patient_name = mysqli_real_escape_string($conn, $_POST['Patient_name']);
+    $patient_dob = mysqli_real_escape_string($conn, $_POST['Patient_DOB']);
+    $subjective_pain = mysqli_real_escape_string($conn, $_POST['Subjective_Pain']);
+    $subjective_distance = mysqli_real_escape_string($conn, $_POST['Subjective_Distance']);
+    $objective_pedal = mysqli_real_escape_string($conn, $_POST['Objective_Pedal']);
+    $objective_pedal_left = mysqli_real_escape_string($conn, $_POST['Objective_Pedal_Left']);
+    $objective_pedal_right = mysqli_real_escape_string($conn, $_POST['Objective_Pedal_Right']);
+    $object_amputation = mysqli_real_escape_string($conn, $_POST['Object_Amputation']);
+    $object_amputation_left_level = mysqli_real_escape_string($conn, $_POST['Object_Amputation_Left_Level']);
+    $object_amputation_right_levels = mysqli_real_escape_string($conn, $_POST['Object_Amputation_Right_Levels']);
+    $object_dependent_rubor = mysqli_real_escape_string($conn, $_POST['Object_Dependent_rubor']);
+    $object_chronic_sores = mysqli_real_escape_string($conn, $_POST['Object_Chronic_sores']);
+    $object_walking_impairment_questionnaire_completed = mysqli_real_escape_string($conn, $_POST['Object_Walking_Impairment_Questionnaire_completed']);
+    $object_rutherford_score = mysqli_real_escape_string($conn, $_POST['RUTHERFORD_SCORE']);
+    $object_ambulatory_status = mysqli_real_escape_string($conn, $_POST['Object_Ambulatory_status']);
+    $object_failed_conservative = mysqli_real_escape_string($conn, $_POST['Object_Failed_conservative']);
+    $object_dual_anti_platelet_statin = mysqli_real_escape_string($conn, $_POST['Object_dual_anti_platelet_statin']);
+    $object_dual_wks_mos = mysqli_real_escape_string($conn, $_POST['Object_dual_wksmos']);
+    $object_pletal = mysqli_real_escape_string($conn, $_POST['Object_pletal']);
+    $object_pletal_wks_mos = mysqli_real_escape_string($conn, $_POST['Object_pletal_wksmos']);
+    $object_structured_non_structured_exercise_walking_program = mysqli_real_escape_string($conn, $_POST['Object_Structurednon_structured_exercise_walking_program']);
+    $object_structured_non_structured_exercise_walking_program_wks_mos = mysqli_real_escape_string($conn, $_POST['Object_Structurednon_structured_exercise_walking_program_wksmos']);
+    $object_smoking_cessation_program = mysqli_real_escape_string($conn, $_POST['Object_Smoking_cessation_program']);
+    $object_smoking_cessation_program_wks_mos = mysqli_real_escape_string($conn, $_POST['Object_Smoking_cessation_program_wksmos']);
+    $rutherford_score = mysqli_real_escape_string($conn, $_POST['RUTHERFORD_SCORE']);
+    $testing_abi_tbi = mysqli_real_escape_string($conn, $_POST['Testing_ABI_TBI']);
+    $testing_lower_extremity = mysqli_real_escape_string($conn, $_POST['Testing_Lower_extremity']);
+    $testing_cta = mysqli_real_escape_string($conn, $_POST['Testing_CTA']);
     $medication = mysqli_real_escape_string($conn, $_POST['medication']);
     $labwork = mysqli_real_escape_string($conn, $_POST['labwork']);
-    $labwork_instruct = mysqli_real_escape_string($conn, $_POST['labworkInstruct']);
+    $labwork_instruct = mysqli_real_escape_string($conn, $_POST['labwork_Instruct']);
     $physician = mysqli_real_escape_string($conn, $_POST['Physician']);
     $ma = mysqli_real_escape_string($conn, $_POST['MA']);
 
@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$object_structured_non_structured_exercise_walking_program_wks_mos',
         '$object_smoking_cessation_program',
         '$object_smoking_cessation_program_wks_mos',
-        '$rutherford_score',
+        null,
         '$testing_abi_tbi',
         '$testing_lower_extremity',
         '$testing_cta',

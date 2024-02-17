@@ -5,8 +5,8 @@ include "DB.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Sanitize and escape POST data
-    $patient_name = mysqli_real_escape_string($conn, $_POST['Patientname']);
-    $patient_dob = mysqli_real_escape_string($conn, $_POST['PatientDOB']);
+    $patient_name = mysqli_real_escape_string($conn, $_POST['Patient_name']);
+    $patient_dob = mysqli_real_escape_string($conn, $_POST['Patient_DOB']);
     $baseline = mysqli_real_escape_string($conn, $_POST['Baseline']);
     $_1 = mysqli_real_escape_string($conn, $_POST['1']);
     $_2 = mysqli_real_escape_string($conn, $_POST['2']);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_14 = mysqli_real_escape_string($conn, $_POST['14']);
     $_15 = mysqli_real_escape_string($conn, $_POST['15']);
     $physician_signature = mysqli_real_escape_string($conn, $_POST['PhysicianSignature']);
-    $submitted_date = mysqli_real_escape_string($conn, $_POST['submiteddate']);
+    // $submitted_date = mysqli_real_escape_string($conn, $_POST['submiteddate']);
     $patient_signature = mysqli_real_escape_string($conn, $_POST['PatientSignature']);
 
     // Build the INSERT query

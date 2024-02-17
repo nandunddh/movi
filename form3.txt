@@ -1,8 +1,0 @@
-Patient = Patientname
-DOB = PatientDOB
-Baseline = Baseline(Baseline, 1, 6, 12, 24, 34 months)
-DO YOU HAVE TROUBLE WITH ANY OF THE FOLLOWING
-	1 to 15
-Patient Signature = Patient Signature
-Date = submited date
-Physician Signature = Physician Signature

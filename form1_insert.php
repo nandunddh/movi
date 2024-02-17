@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $patient_name = mysqli_real_escape_string($conn, $_POST['Patient_Name']);
     $dob = mysqli_real_escape_string($conn, $_POST['DOB']);
     $physician = mysqli_real_escape_string($conn, $_POST['Physician']);
-    $procedure_date = mysqli_real_escape_string($conn, date('Y-m-d', strtotime($_POST['Procedure Date'])));
+    $procedure_date = mysqli_real_escape_string($conn, $_POST['Procedure_Date']);
     $procedure = mysqli_real_escape_string($conn, $_POST['Procedure']);
     $allergies = mysqli_real_escape_string($conn, $_POST['Allergies']);
     $labs_names = mysqli_real_escape_string($conn, $_POST['labs_names']);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $secondary_insurance = mysqli_real_escape_string($conn, $_POST['Secondary_Insurance']);
     $secondary_policy_number = mysqli_real_escape_string($conn, $_POST['Secondary_Policy_Number']);
     $authorization = mysqli_real_escape_string($conn, $_POST['Authorazation']);
-    $requested_date = mysqli_real_escape_string($conn, $_POST['requested date']);
+    $requested_date = mysqli_real_escape_string($conn, $_POST['requested_date']);
     $patients_language = mysqli_real_escape_string($conn, $_POST['Patients_language']);
     $patients_transportation = mysqli_real_escape_string($conn, $_POST['patients_transportation']);
     $signature = mysqli_real_escape_string($conn, $_POST['signature']);
