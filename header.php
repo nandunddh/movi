@@ -39,10 +39,10 @@
             <a class="nav-link" href="form5.php">Angiogram</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="form6.html">Venogram</a>
+            <a class="nav-link" href="form6.php">Venogram</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="form7.html">Medication Reconciliation</a>
+            <a class="nav-link" href="form7.php">Medication Reconciliation</a>
           </li>
         </ul>
       </div>
